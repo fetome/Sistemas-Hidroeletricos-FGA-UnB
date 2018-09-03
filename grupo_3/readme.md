@@ -12,23 +12,110 @@ O projeto do aproveitamento consistirá na realização e apresentação de cál
   - Cada grupo terá em sua pasta do repositório um conjunto de dados de vazão que deverá ser usado ao longo deste e dos demais projetos quando necessário;
   
   - Modelamento do aproveitamento hidrelétrico. Cada grupo deverá mostrar como ficará o sistema hidromecânico equivalente através do cálculo da energia hidráulica média disponível e do trabalho específico. O grupo 3 deverá usar a  altura de cota **de 10 m** para seu aproveitamento hidrelétrico:
-       
+
+	Energia Hidráulica média disponível:
+
+
+O aproveitamento da energia potencial, por meio de quedas é determinada como energia hidráulica. A energia hidráulica média disponível, transformada em trabalho, é dada por:
+
+
+E_1-E_2=(p_1-p_2)/γ+(〖u_1〗^2-〖u_2〗^2)/2g+(z_1-z_2 )
+
+Onde:
+
+	p é a massa específica da água
+	γ é o peso específico da água
+	u é a velocidade
+	z é a altura de elevação
+	g é a aceleração da gravidade
+
+Fundamentado nas notas de aula, a energia específica terá seu valor máximo quando as condições a seguir ocorrerem:
+
+p_2/γ=p_1/γ;u_2=0;z_2=0
+
+Assim, quanto mais próximo do ponto 2 estiver o nível de jusante maior será seu aproveitamento hidrelétrico, assumindo seu valor máximo. Considerando que a velocidade no ponto 1 é muito pequena e influencia muito pouco no cálculo da energia, e assumindo a altura de cota de 10 metros, a energia hidráulica média será:
+
+E_1-E_2=z_1
+
+E_1-E_2=10m
+
+Essa energia parte da modelagem do sistema hidromecânico equivalente, realizada a partir dos dados do reservatório.
+
+	Trabalho específico:
+
+
+Com o valor de queda líquida de aproveitamento (H_l) calculado no tópico a seguir, obtem-se o trabalho específico do sistema hidromecânico:
+
+
+Y=g∙Hl
+
+Y=9,81∙9,5=93,195 J⁄kg
+
 
   - Determinação da queda do aproveitamento: O grupo 3 deverá considerar uma perda de **0,5 m**, onde cada grupo deverá especificar se a central será de baixa ou de alta queda;
   
+A queda disponível é definida como a queda máxima (Hb) subtraída pela perda de carga do sistema (hp), como visto na equação abaixo:
 
+Hl=Hb-Hp
+
+Hl= 10-0.5 = 9.5m
+
+Baseado na potência máxima P_tmax=20.984,71kW, pela tabela da página 15 da apostila pode-se dizer que a usina é de baixa queda, pois para classificação de PCH sua potência está entre 1000 kW e 30000 kW, e sua altura é inferior a 25 metros.
        
   - Determinação da vazão média de longo tempo baseado nos dados de vazão dados a cada grupo. Cada grupo deverá mostrar como fez este cálculo e as hipóteses adotadas;
   
+  Para determinar a vazão média ao longo do tempo, em m³/s, a média foi baseada nos dados de vazão de todos os dias referentes aos dados
+disponibilizados, desde 1931 a 2013. Manipulados com a ferramenta Excel onde foi tirada a média de todos os dias e o valor obtido foi de:
+
+Q = 225,170 m^3⁄s
+
+  
   - Cálculo da potência hidráulica máxima teórica média e da energia máxima teórica média;
+  
+  a.	Potência Hidráulica Teórica Média
+  
+  Com os dados de vazão média ao longo do tempo, e queda líquida(H_l) calculados anteriormente é possível definir a potência hidráulica máxima teórica(P_tmax) como:
+
+P_tmax=g∙Q∙Hl
+
+P_tmax=9,81∙225,170∙9,5
+
+P_tmax = 20.984,71kW
+
+   b.	Energia Máxima Teórica Média
+
+A energia hidráulica máxima teórica, com base numa estimativa de tempo(t) de retorno de 24h é:
+
+E_tmax=g∙Q∙Hl∙t
+
+E_tmax=9,81∙225,170∙9,5∙24
+
+E_tmax = 503.632,22kWh
+
   
   - Análise dos dados de vazão e energia máxima teórica média;
   
+  A vazão deste projeto é alta, que consequentemente acarreta uma grande produção de energia caso funcione durante 24 horas.
+  
   - Escolha do tipo de central e o arranjo utilizado;
   
+  Como referenciado nas notas de aula, de acordo com Resolução 652 da ANEEL, a classificação para enquadramento de aproveitamento energético são baseadas na potência e altura de queda. Visto que possui uma potência entre 1000kW e 30MW, é classificadao como Pequena Central Hidrelétrica(PCH).
+  O arranjo será fio d'água
+  
   - Estimativa da potência instalada;
+ 
+ Assumiremos a potência máxima com eficiência de uma turbina kaplan de 80%:
+ P_installed = η∙P_tmax
+
+P_installed = 0,8∙20.984,71
+
+P_installed = 16.787,768kW
+
+Assumiremos a usina com produção para auto consumo.
+
   
   - Desenho esquemático do sistema hidromecânico equivalente;
+  Enviado no documento por e-mail.
   
   - Cada grupo deverá preencher uma ART (Anotação de Responsabilidade Técnica) para:
 
@@ -41,6 +128,7 @@ O projeto do aproveitamento consistirá na realização e apresentação de cál
 - Projetos que não tiverem todos estes itens respondidos **não serão avaliados!**
 Este projeto deverá ser feito neste arquivo, com o *upload* das respectivas ARTs, será até o dia **02/09/2018**. Pedidos de adiamento só serão concedidos em casos excepcionais, a serem decididos pelo professor.
 
+As ART foram enviadas por email.
 
 ### Projeto Hidrológico
 
